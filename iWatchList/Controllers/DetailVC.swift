@@ -6,27 +6,78 @@
 //
 
 import UIKit
+import Kingfisher
+//import RealmSwift
 
 class DetailVC: UIViewController {
-
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var releaseLbl: UILabel!
+    @IBOutlet weak var imdbLbl: UILabel!
+    @IBOutlet weak var voteCountLbl: UILabel!
+    @IBOutlet weak var popularityLbl: UILabel!
+    @IBOutlet weak var overViewLbl: UITextView!
+    
+    
+    var imgUrl:String = ""
+    var originalTitle:String = ""
+    var releaseDate:String = ""
+    var imdb:Double = 0.0
+    var voteCount:Int = 0
+    var popularity:Double = 0.0
+    var overView:String = ""
+    //let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("Selected Title::",originalTitle)
+        setData()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setData(){
+        
+        let url = URL(string:"https://image.tmdb.org/t/p/w500"+imgUrl)
+        posterImage.kf.setImage(with:url)
+        titleLbl.text = originalTitle
+        releaseLbl.text = releaseDate
+        imdbLbl.text = String(imdb)
+        voteCountLbl.text = String(voteCount)
+        popularityLbl.text = String(popularity.rounded())
+        overViewLbl.text = overView
     }
-    */
+  
     @IBAction func BackClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func searchClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func addClicked(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Alert", message: originalTitle+" Added sucessfully to Watchlist", preferredStyle: .alert)
+      
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            print("ok Tappdd")
+           
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Watchlist", style: .default, handler: { action in
+            let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+            let detail = storyBoard.instantiateViewController(withIdentifier: "watchListVC") as! WatchListVC
+            detail.modalPresentationStyle = .fullScreen
+            self.present(detail, animated: true, completion: nil)
+           
+        }))
+       present(alert, animated: true)
+        
+    }
+    
+    
+    //let watchListDB = WatchListDB()
+    
+    
+    
     
 }

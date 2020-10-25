@@ -6,9 +6,12 @@
 //
 
 import UIKit
+//import RealmSwift
 
 class WatchListVC: UIViewController {
 
+ //   let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
