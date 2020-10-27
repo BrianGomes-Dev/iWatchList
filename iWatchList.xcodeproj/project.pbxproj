@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		6B274278ED3E4B6C4830A31A /* Pods_iWatchListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3550E3F194325B65E74A4A /* Pods_iWatchListTests.framework */; };
 		757FB29070998A2A81022DE0 /* Pods_iWatchList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B988F94CE1AC6CE9AE768C6 /* Pods_iWatchList.framework */; };
+		7A4BB5DF2548767700D11202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4BB5DD2548767700D11202 /* Main.storyboard */; };
 		7ABD69E02545D2AB001A7A3B /* WatchListDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD69DF2545D2AB001A7A3B /* WatchListDB.swift */; };
 		7ABFA102254445AB00ADEFAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABFA101254445AB00ADEFAF /* Constants.swift */; };
 		7ABFA10A25444E0900ADEFAF /* MainDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABFA10925444E0900ADEFAF /* MainDataModel.swift */; };
 		7ABFA1112544566000ADEFAF /* MainCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABFA10F2544566000ADEFAF /* MainCells.swift */; };
 		7ABFA1122544566000ADEFAF /* MainCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ABFA1102544566000ADEFAF /* MainCells.xib */; };
+		7AC1BB6B2548732100E8B737 /* WatchListDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1BB692548732100E8B737 /* WatchListDB.xcdatamodeld */; };
 		7AFA74BD2542DAA000109A1B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFA74BC2542DAA000109A1B /* NetworkManager.swift */; };
 		7AFDD47A2542093600BA5672 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDD4792542093600BA5672 /* AppDelegate.swift */; };
 		7AFDD47C2542093600BA5672 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDD47B2542093600BA5672 /* SceneDelegate.swift */; };
-		7AFDD4812542093600BA5672 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFDD47F2542093600BA5672 /* Main.storyboard */; };
 		7AFDD4832542093800BA5672 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AFDD4822542093800BA5672 /* Assets.xcassets */; };
 		7AFDD4862542093800BA5672 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AFDD4842542093800BA5672 /* LaunchScreen.storyboard */; };
 		7AFDD4912542093800BA5672 /* iWatchListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDD4902542093800BA5672 /* iWatchListTests.swift */; };
@@ -51,16 +52,17 @@
 		3B988F94CE1AC6CE9AE768C6 /* Pods_iWatchList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iWatchList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2758E91CE07F855C73E6C3 /* Pods-iWatchList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWatchList.release.xcconfig"; path = "Target Support Files/Pods-iWatchList/Pods-iWatchList.release.xcconfig"; sourceTree = "<group>"; };
 		7956D691716798C74E43CD3F /* Pods-iWatchListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iWatchListTests.debug.xcconfig"; path = "Target Support Files/Pods-iWatchListTests/Pods-iWatchListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A4BB5DE2548767700D11202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../iWatchList 2/iWatchList/iWatchList/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		7ABD69DF2545D2AB001A7A3B /* WatchListDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListDB.swift; sourceTree = "<group>"; };
 		7ABFA101254445AB00ADEFAF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7ABFA10925444E0900ADEFAF /* MainDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataModel.swift; sourceTree = "<group>"; };
 		7ABFA10F2544566000ADEFAF /* MainCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCells.swift; sourceTree = "<group>"; };
 		7ABFA1102544566000ADEFAF /* MainCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCells.xib; sourceTree = "<group>"; };
+		7AC1BB6A2548732100E8B737 /* WatchListDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WatchListDB.xcdatamodel; sourceTree = "<group>"; };
 		7AFA74BC2542DAA000109A1B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7AFDD4762542093600BA5672 /* iWatchList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWatchList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFDD4792542093600BA5672 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFDD47B2542093600BA5672 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7AFDD4802542093600BA5672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AFDD4822542093800BA5672 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AFDD4852542093800BA5672 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AFDD4872542093800BA5672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,7 +155,7 @@
 				7AFDD4B925420D5000BA5672 /* Views */,
 				7AFDD4B725420D3700BA5672 /* Models */,
 				7ABFA1002544459600ADEFAF /* Helpers */,
-				7AFDD47F2542093600BA5672 /* Main.storyboard */,
+				7A4BB5DD2548767700D11202 /* Main.storyboard */,
 				7AFDD4792542093600BA5672 /* AppDelegate.swift */,
 				7AFDD47B2542093600BA5672 /* SceneDelegate.swift */,
 				7AFDD4822542093800BA5672 /* Assets.xcassets */,
@@ -186,6 +188,7 @@
 			children = (
 				7ABFA10925444E0900ADEFAF /* MainDataModel.swift */,
 				7ABD69DF2545D2AB001A7A3B /* WatchListDB.swift */,
+				7AC1BB692548732100E8B737 /* WatchListDB.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,7 +346,7 @@
 				7AFDD4862542093800BA5672 /* LaunchScreen.storyboard in Resources */,
 				7AFDD4832542093800BA5672 /* Assets.xcassets in Resources */,
 				7ABFA1122544566000ADEFAF /* MainCells.xib in Resources */,
-				7AFDD4812542093600BA5672 /* Main.storyboard in Resources */,
+				7A4BB5DF2548767700D11202 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +482,7 @@
 				7ABD69E02545D2AB001A7A3B /* WatchListDB.swift in Sources */,
 				7AFDD4BE25420DBE00BA5672 /* MainVC.swift in Sources */,
 				7ABFA10A25444E0900ADEFAF /* MainDataModel.swift in Sources */,
+				7AC1BB6B2548732100E8B737 /* WatchListDB.xcdatamodeld in Sources */,
 				7ABFA1112544566000ADEFAF /* MainCells.swift in Sources */,
 				7AFDD47C2542093600BA5672 /* SceneDelegate.swift in Sources */,
 			);
@@ -516,10 +520,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7AFDD47F2542093600BA5672 /* Main.storyboard */ = {
+		7A4BB5DD2548767700D11202 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7AFDD4802542093600BA5672 /* Base */,
+				7A4BB5DE2548767700D11202 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -819,6 +823,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7AC1BB692548732100E8B737 /* WatchListDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7AC1BB6A2548732100E8B737 /* WatchListDB.xcdatamodel */,
+			);
+			currentVersion = 7AC1BB6A2548732100E8B737 /* WatchListDB.xcdatamodel */;
+			path = WatchListDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7AFDD46E2542093600BA5672 /* Project object */;
 }
