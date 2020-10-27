@@ -7,7 +7,7 @@
 
 import UIKit
 import Kingfisher
-//import RealmSwift
+import CoreData
 
 class DetailVC: UIViewController {
     @IBOutlet weak var posterImage: UIImageView!
@@ -26,7 +26,7 @@ class DetailVC: UIViewController {
     var voteCount:Int = 0
     var popularity:Double = 0.0
     var overView:String = ""
-    //let realm = try! Realm()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +56,27 @@ class DetailVC: UIViewController {
     }
     @IBAction func addClicked(_ sender: Any) {
         
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+       
+        let newWatchItem = WatchItem(context: context)
+        newWatchItem.posterPath = imgUrl
+        newWatchItem.originalTitle = originalTitle
+        newWatchItem.releaseDate = releaseDate
+        newWatchItem.voteAverage = imdb
+        newWatchItem.voteCount = Int32(voteCount)
+        newWatchItem.popularity = popularity
+        newWatchItem.overview = overView
+        newWatchItem.title = originalTitle
+        
+        do{
+        try context.save()
+            print("DATA SAVED")
+        }
+        catch{
+            print("ERROR:",error.localizedDescription)
+        }
+        
         let alert = UIAlertController(title: "Alert", message: originalTitle+" Added sucessfully to Watchlist", preferredStyle: .alert)
       
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
@@ -73,11 +94,5 @@ class DetailVC: UIViewController {
        present(alert, animated: true)
         
     }
-    
-    
-    //let watchListDB = WatchListDB()
-    
-    
-    
-    
+
 }

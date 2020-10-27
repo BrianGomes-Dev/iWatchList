@@ -19,16 +19,15 @@ class MainCells: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         bgView.layer.cornerRadius = 20.0
-           bgView.layer.shadowColor = UIColor.gray.cgColor
-           bgView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-           bgView.layer.shadowRadius = 12.0
+        bgView.layer.shadowColor = UIColor.gray.cgColor
+        bgView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        bgView.layer.shadowRadius = 12.0
         bgView.layer.shadowOpacity = 1.0
-       posterImage.clipsToBounds = true
+        posterImage.clipsToBounds = true
         posterImage.roundCorners(corners: [.topLeft,.topRight], radius: 20)
         
-//        contentView.
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5))
-
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,6 +39,16 @@ class MainCells: UITableViewCell {
     func setData(data:MainDataModel){
       
         let url = URL(string:"https://image.tmdb.org/t/p/w500"+data.posterPath)
+        posterImage.kf.setImage(with:url)
+        titleLbl.text = data.title
+        releaseLbl.text = data.releaseDate
+        imdbLbl.text = "iMDB : "+String(data.voteAverage)
+        
+    }
+    
+    func setWatchListData(data:WatchItem){
+      
+        let url = URL(string:"https://image.tmdb.org/t/p/w500"+data.posterPath!)
         posterImage.kf.setImage(with:url)
         titleLbl.text = data.title
         releaseLbl.text = data.releaseDate

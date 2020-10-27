@@ -20,7 +20,7 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        
         setUpSearchBar()
         loadMovies()
         setTableView()
@@ -71,17 +71,12 @@ class MainVC: UIViewController {
 
     @IBAction func MoviesClicked(_ sender: Any) {
         
-//        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-//        let watchList = storyBoard.instantiateViewController(withIdentifier: "watchListVC") as! WatchListVC
-//        watchList.modalPresentationStyle = .fullScreen
-//        self.present(watchList, animated: true, completion: nil)
-        
         isMoviesSelected = true
         loadMovies()
         searchBar.placeholder = "Search Movies"
         tvSeriesBtn.backgroundColor = UIColor.white
         tvSeriesBtn.tintColor = UIColor.darkGray
-       // moviesBtn.isUserInteractionEnabled = true
+   
         
         moviesBtn.backgroundColor = UIColor.systemGreen
         moviesBtn.tintColor = UIColor.white
@@ -133,7 +128,7 @@ extension MainVC:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 290
+        return 300
     }
     
  
@@ -179,8 +174,6 @@ extension MainVC: UISearchBarDelegate{
         }
         
     }
-    
-    
 }
 
 
